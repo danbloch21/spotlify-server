@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const PORT = process.env.PORT;
+const redirectUri = "http://localhost:8888/callback";
 
 app.post("/login", async (req, res) => {
   const { code } = req.body;
